@@ -1,0 +1,22 @@
+$colorPrimary: #01b3ba;
+.footer {
+    background-color: #fff;
+    position: sticky;
+    padding: 20px 10px;
+    overflow: hidden;
+    top: 100%;
+
+}
+h1 {
+  color: #000;
+  font-size: 20px;
+}
+a {
+  color: #000;
+  text-decoration: none;
+  padding: 0px 10px;
+  font-size: 16px;
+}
+a:hover{
+  color: $colorPrimary;
+}

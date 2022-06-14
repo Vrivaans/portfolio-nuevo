@@ -1,0 +1,40 @@
+
+@import url('http://fonts.cdnfonts.com/css/pf-din-text-comp-pro-x-thin');
+
+
+
+.banner{
+  background-image: url(../../../assets/programming_background1.png);
+  height: 820px;
+  background-position: center ;
+  background-size: cover;
+}
+.banner h1{
+  color: #fff;
+  //font-size: 50px;
+  font-weight: bold;
+  top: 35%;
+  left: 70%;
+  position: absolute;
+  text-align: center;
+}
+p{
+  font-size: 50;
+}
+h2{
+  color: #fff;
+  font-size: 65px;
+  font-weight: bold;
+  top: 25%;
+  left: 76%;
+  position: absolute;
+  text-align: center;
+}
+
+h1 {
+  font-size: 120px;
+  font-family: 'PF Din Text Comp Pro X Thin', sans-serif;
+}
+h2 {
+  font-family: 'PF Din Text Comp Pro X Thin', sans-serif;
+}

@@ -1,0 +1,12 @@
+
+$colorPrimary: #01b3ba;
+$colorSecondary: #162328;
+.nav-link.active.active-link, .nav-link active, .active-link, .navbar-light{
+  color: $colorPrimary;
+  font-weight: bold;
+}
+a:hover{
+  color: $colorPrimary
+}
+
+
