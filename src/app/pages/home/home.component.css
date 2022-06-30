@@ -1,14 +1,12 @@
-
-@import url('http://fonts.cdnfonts.com/css/pf-din-text-comp-pro-x-thin');
-
-
-.hero{
+@import url("http://fonts.cdnfonts.com/css/pf-din-text-comp-pro-x-thin");
+.hero {
   position: relative;
   height: 100vh;
-  background-color:#01b3ba;
+  background-color: #01b3ba;
   overflow: hidden;
 }
-#image{
+
+#image {
   width: auto;
   height: auto;
 }
@@ -29,3 +27,4 @@ h2 {
   font-weight: bold;
 }
 */
+/*# sourceMappingURL=home.component.css.map */

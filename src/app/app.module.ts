@@ -10,6 +10,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { MainComponent } from './main/main.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SkillComponentComponent } from './pages/skill-component/skill-component.component';
+import { AuthModule } from '@auth0/auth0-angular';
+
 
 
 
@@ -22,12 +24,13 @@ import { SkillComponentComponent } from './pages/skill-component/skill-component
     AboutComponent,
     MainComponent,
     ContactComponent,
-    SkillComponentComponent
+    SkillComponentComponent,
+
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

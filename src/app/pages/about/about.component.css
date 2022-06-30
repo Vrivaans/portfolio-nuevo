@@ -1,15 +1,16 @@
-
-h2, p{
+h2, p {
   font-family: 'PF Din Text Comp Pro X Thin', sans-serif;
   font-weight: bold;
 }
-h2{
+
+h2 {
   font-size: 90px;
   text-align: center;
 }
-p{
+
+p {
   font-size: 30px;
   text-align: center;
   top: 50%;
 }
-
+/*# sourceMappingURL=about.component.css.map */

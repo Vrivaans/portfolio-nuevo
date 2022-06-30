@@ -1,0 +1,9 @@
+.nav-link.active.active-link, .nav-link active, .active-link, .navbar-light {
+  color: #01b3ba;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #01b3ba;
+}
+/*# sourceMappingURL=navbar.component.css.map */
