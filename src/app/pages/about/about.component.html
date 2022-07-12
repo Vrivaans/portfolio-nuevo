@@ -1,70 +1,82 @@
-<div class="container" id="divAbout">
-  <div class="row justify-content-center align-items-center vh-100 mt-3 ms-2">
-    <div class="section" id="about">
-      <div class="row">
-        <div class="col-sm-6">
-          <div id="fotoPerfil" class="">
-            <img src="../../../assets/foto-perfil-png1.png" alt="" />
-            <div class="modificar-foto">
-              <div
-                *ngIf="
-                  esta_logeado;
-                  then modificarFotoPerfil;
-                  else ocultarModificarFotoPerfil
-                "
-              ></div>
-              <ng-template #modificarFotoPerfil>
-                <button
-                  class="btn btn-dark"
-                  ng-click=""
-                  (click)="editarFotoPerfil()"
-                >
-                  <i class="bi bi-pencil-fill"></i>
-                </button>
-                <button class="btn btn-dark" (click)="borrarFotoPerfil()">
-                  <i class="bi bi-trash-fill"></i>
-                </button>
-              </ng-template>
-              <ng-template #ocultarModificarFotoPerfil></ng-template>
+<section class="section">
+  <div class="container" id="divAbout">
+    <div class="row justify-content-center align-items-center vh-100 mt-3 ms-2">
+      <div class="section" id="about">
+        <div class="row">
+          <div class="col-sm-6">
+            <div id="fotoPerfil" class="">
+              <img src="../../../assets/foto-perfil-png1.png" alt="" />
+              <div class="modificar-foto d-flex justify-content-center">
+                <div
+                  *ngIf="
+                    esta_logeado;
+                    then modificarFotoPerfil;
+                    else ocultarModificarFotoPerfil
+                  "
+                ></div>
+                <ng-template #modificarFotoPerfil>
+                  <button
+                    type="button"
+                    class="btn btn-dark"
+                    ng-click=""
+                    (click)="editarFotoPerfil()"
+                  >
+                    <i class="bi bi-pencil-fill"></i>
+                    Editar
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-dark"
+                    (click)="borrarFotoPerfil()"
+                  >
+                    <i class="bi bi-trash-fill"></i>
+                    Eliminar
+                  </button>
+                </ng-template>
+                <ng-template #ocultarModificarFotoPerfil></ng-template>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-sm-6">
-          <div id="divTexto">
-            <h2>Acerca de mí</h2>
-            <p>
-              Soy de la ciudad de Merlo, Buenos Aires, estudié electrónica en la
-              Técnica Nº1 de Merlo y ahí aprendí sobre programación, para
-              microcontroladores PIC, ATMEGA y Arduino. Por 3 años me dediqué a
-              la edición de video usando Adobe Premiere para edición de eventos
-              sociales.
-            </p>
-            <div class="modificar-aboutMe">
-              <div
-                *ngIf="
-                  esta_logeado;
-                  then modificarAboutMe;
-                  else ocultarModificarAboutMe
-                "
-              ></div>
-              <ng-template #modificarAboutMe>
-                <button
-                  class="btn btn-dark"
-                  ng-click=""
-                  (click)="editarAboutMe()"
-                >
-                  <i class="bi bi-pencil-fill"></i>
-                </button>
-                <button class="btn btn-dark" (click)="borrarAboutMe()">
-                  <i class="bi bi-trash-fill"></i>
-                </button>
-              </ng-template>
-              <ng-template #ocultarModificarAboutMe></ng-template>
+          <div class="col-sm-6">
+            <div id="divTexto">
+              <h2>Acerca de mí</h2>
+              <p>
+                Soy de la ciudad de Merlo, Buenos Aires, estudié electrónica en
+                la Técnica Nº1 de Merlo y ahí aprendí sobre programación, para
+                microcontroladores PIC, ATMEGA y Arduino. Por 3 años me dediqué
+                a la edición de video usando Adobe Premiere para edición de
+                eventos sociales.
+              </p>
+              <div class="modificar-aboutMe d-flex justify-content-center">
+                <div
+                  *ngIf="
+                    esta_logeado;
+                    then modificarAboutMe;
+                    else ocultarModificarAboutMe
+                  "
+                ></div>
+                <ng-template #modificarAboutMe>
+                  <button
+                    class="btn btn-dark"
+                    ng-click=""
+                    (click)="editarAboutMe()"
+                  >
+                    <i class="bi bi-pencil-fill"></i>
+                    Editar
+                  </button>
+                  <button class="btn btn-dark" (click)="borrarAboutMe()">
+                    <i class="bi bi-trash-fill"></i>
+                    Eliminar
+                  </button>
+                </ng-template>
+                <ng-template #ocultarModificarAboutMe></ng-template>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
