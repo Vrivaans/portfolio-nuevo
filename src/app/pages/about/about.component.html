@@ -18,6 +18,8 @@
                   <button
                     type="button"
                     class="btn btn-dark"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modificarDeFotoPerfil"
                     ng-click=""
                     (click)="editarFotoPerfil()"
                   >
@@ -39,6 +41,48 @@
             </div>
           </div>
 
+          <!-- Modal -->
+
+          <div
+            class="modal fade"
+            id="modificarDeFotoPerfil"
+            tabindex="-1"
+            aria-labelledby="modificarDeFotoPerfil"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5
+                    class="modal-title text-center"
+                    id="modificarDeFotoPerfil"
+                  >
+                    Modificar foto de perfil
+                  </h5>
+
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">A ver si era esto el problema :v</div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    data-bs-dismiss="modal"
+                  >
+                    Cerrar
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Guardar cambios
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="col-sm-6">
             <div id="divTexto">
               <h2>Acerca de mí</h2>
