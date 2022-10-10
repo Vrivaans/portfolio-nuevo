@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { TokenService } from 'src/app/Services/token.service';
+
+
 
 @Component({
   selector: 'app-about',
@@ -7,11 +11,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private router: Router, private tokenService: TokenService){}
 
   ngOnInit(): void {
+    if(this.tokenService.getToken()){
+      this.esta_logeado = true;
+    }else{
+      this.esta_logeado = false;
+    }
   }
-  esta_logeado = true;
+
+  onLogOut(): void {
+      this.tokenService.logOut();
+      window.location.reload();
+  }
+
+
+
+  esta_logeado = false;
   borrarFotoPerfil(){
     console.log("estoy borrando :v")
   }

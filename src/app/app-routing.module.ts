@@ -4,10 +4,12 @@ import { MainComponent } from './main/main.component';
 import { AboutComponent } from './pages/about/about.component';
 
 import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 const routes: Routes = [
-  {path: '', component:MainComponent}
+  {path: '', component:MainComponent},
+  {path: 'login', component:LoginComponent}
 
 
 

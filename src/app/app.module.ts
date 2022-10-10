@@ -11,6 +11,15 @@ import { MainComponent } from './main/main.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SkillComponentComponent } from './pages/skill-component/skill-component.component';
 import { AuthModule } from '@auth0/auth0-angular';
+import { ExperienceComponent } from './pages/experience/experience.component';
+import { EducationComponent } from './pages/education/education.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './pages/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { interceptorProvider } from './Services/interceptor-service';
+import { NewExperienceComponent } from './pages/experience/new-experience/new-experience.component';
+
+
 
 
 
@@ -25,14 +34,27 @@ import { AuthModule } from '@auth0/auth0-angular';
     MainComponent,
     ContactComponent,
     SkillComponentComponent,
+    ExperienceComponent,
+    EducationComponent,
+    LoginComponent,
+    NewExperienceComponent,
+
 
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+
+
+
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    interceptorProvider
+  ],
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
