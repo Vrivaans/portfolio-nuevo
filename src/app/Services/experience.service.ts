@@ -14,6 +14,12 @@ export class ExperienceService {
   public list(): Observable<Experience[]>{
     return this.httpClient.get<Experience[]>(this.URL+'traer/experiencias');
   }
+
+  public detail(id: number): Observable<Experience>{
+    return this.httpClient.get<Experience>(this.URL + `detail/${id}`);
+  }
+
+
   public save(experience: Experience): Observable<any>{
     return this.httpClient.post<any>(this.URL+'crear/experiencia', experience)
   }
@@ -22,7 +28,9 @@ export class ExperienceService {
     return this.httpClient.put<any>(this.URL+`editar/experiencia/${id}`, experience)
   }
   public delete(id:number): Observable<any>{
-    return this.httpClient.delete<any>(this.URL+`borrar/experience/${id}`)
+    return this.httpClient.delete<any>(this.URL+`borrar/experiencia/${id}`)
   }
+
+  //Parte del servicio para otra lógica del componente de experiencia
 
 }
