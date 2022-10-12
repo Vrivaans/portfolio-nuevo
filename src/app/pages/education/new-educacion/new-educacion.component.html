@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="row">
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+      <div class="form-group">
+        <label for="nameCertification"
+          >Indique el nombre de la certificación</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="nameCertification"
+          name="nameCertification"
+          [(ngModel)]="nameCertification"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="expeditionDate"
+          >Indique la fecha de finalización(Si todavía no terminó coloque "En
+          proceso")</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="expeditionDate"
+          name="expeditionDate"
+          [(ngModel)]="expeditionDate"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="nameInstitution"
+          >Indique en qué institución realiza o realizó sus estudios
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          id="nameInstitution"
+          name="nameInstitution"
+          [(ngModel)]="nameInstitution"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="enCurso"
+          >Indique si finalizó sus estudios (por el momento solo se puede poner
+          "true" o "false")</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="enCurso"
+          name="enCurso"
+          [(ngModel)]="enCurso"
+        />
+      </div>
+      <br />
+      <button
+        class="btn btn-primary"
+        data-bs-dismiss="modal"
+        (click)="reLoadList()"
+      >
+        Agregar Educacion
+      </button>
+    </form>
+  </div>
+</div>

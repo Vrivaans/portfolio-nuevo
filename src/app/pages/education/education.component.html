@@ -1,7 +1,90 @@
 <section class="section" id="skillSection">
-  <div
-    class="image-fluid d-flex justify-content-center align-items-center vh-100 mt-3 ms-2"
-  >
-    <h2>Educacion funciona</h2>
+  <div class="row">
+    <h1>Educacion</h1>
+    <div class="col-lg-2">
+      <button
+        type="button"
+        class="btn btn-dark"
+        data-bs-toggle="modal"
+        data-bs-target="#newEducacionModal"
+        ng-click=""
+        *ngIf="esta_logeado"
+      >
+        <i class="bi bi-pencil-fill"> Nueva Educacion</i>
+      </button>
+    </div>
+    <!-- Modal -->
+
+    <div
+      class="modal fade"
+      id="newEducacionModal"
+      tabindex="-1"
+      aria-labelledby="newEducacionModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center" id="newEducacionModal">
+              Agregar una nueva educacion
+            </h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              (click)="onClose()"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <app-new-educacion></app-new-educacion>
+          </div>
+
+          <!-- <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-primary">
+              Guardar cambios
+            </button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="col lg 1"></div>
+    <div class="col-lg-11">
+      <table class="table">
+        <tbody>
+          <tr *ngFor="let Educacion of educacion">
+            <td>
+              <h2>{{ Educacion.nameCertification }}</h2>
+            </td>
+
+            <td>Certificado expedido en: {{ Educacion.expeditionDate }}</td>
+            <td>En la institución: {{ Educacion.nameInstitution }}</td>
+            <td>Estado: {{ Educacion.enCurso }}</td>
+
+            <td *ngIf="esta_logeado">
+              <button type="button" class="btn btn-light">
+                <i class="bi bi-pencil-fill"></i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger"
+                (click)="delete(Educacion.id)"
+              >
+                <i class="bi bi-trash3"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>

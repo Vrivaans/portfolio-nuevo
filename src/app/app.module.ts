@@ -18,6 +18,11 @@ import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './Services/interceptor-service';
 import { NewExperienceComponent } from './pages/experience/new-experience/new-experience.component';
+import { EditExperienceComponent } from './pages/experience/edit-experience/edit-experience.component';
+import { NewEducacionComponent } from './pages/education/new-educacion/new-educacion.component';
+import { EditEducacionComponent } from './pages/education/edit-educacion/edit-educacion.component';
+import { NewSkillComponent } from './pages/skill-component/new-skill/new-skill.component';
+import { EditSkillComponent } from './pages/skill-component/edit-skill/edit-skill.component';
 
 
 
@@ -38,6 +43,11 @@ import { NewExperienceComponent } from './pages/experience/new-experience/new-ex
     EducationComponent,
     LoginComponent,
     NewExperienceComponent,
+    EditExperienceComponent,
+    NewEducacionComponent,
+    EditEducacionComponent,
+    NewSkillComponent,
+    EditSkillComponent,
 
 
 

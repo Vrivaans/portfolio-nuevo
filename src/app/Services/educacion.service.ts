@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+
 import { Educacion } from '../Models/educacion';
 
 @Injectable({
@@ -8,7 +10,7 @@ import { Educacion } from '../Models/educacion';
 })
 export class EducacionService {
 
-  URL = 'http://localhost:8080/'
+  URL = environment.URL;
   constructor(private httpClient: HttpClient) { }
 
   public list(): Observable<Educacion[]> {
@@ -25,6 +27,6 @@ export class EducacionService {
     return this.httpClient.put<any>(this.URL+`editar/educacion/${id}`,educacion)
   }
   public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.URL+`borrar/educacion/{id}`)
+    return this.httpClient.delete<any>(this.URL+`borrar/educacion/${id}`)
   }
 }

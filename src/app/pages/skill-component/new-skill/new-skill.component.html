@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+      <div class="form-group">
+        <label for="nameHability">Indique habilidad</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nameHability"
+          name="nameHability"
+          [(ngModel)]="nameHability"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="iconHability">Coloque link del ícono</label>
+        <input
+          type="text"
+          class="form-control"
+          id="iconHability"
+          name="iconHability"
+          [(ngModel)]="iconHability"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="percentageHability"
+          >Indique un porcentaje en número entero
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          id="percentageHability"
+          name="percentageHability"
+          [(ngModel)]="percentageHability"
+          required
+        />
+      </div>
+
+      <br />
+      <button
+        class="btn btn-primary"
+        data-bs-dismiss="modal"
+        (click)="reLoadList()"
+      >
+        Agregar Habilidad
+      </button>
+    </form>
+  </div>
+</div>

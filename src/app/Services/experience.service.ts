@@ -1,13 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Experience } from '../Models/experience';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExperienceService {
-  URL: string = 'http://localhost:8080/'
+  URL = environment.URL;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -31,6 +32,8 @@ export class ExperienceService {
     return this.httpClient.delete<any>(this.URL+`borrar/experiencia/${id}`)
   }
 
-  //Parte del servicio para otra lógica del componente de experiencia
+
+
+
 
 }

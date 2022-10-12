@@ -2,6 +2,92 @@
   <div
     class="image-fluid d-flex justify-content-center align-items-center vh-100 mt-3 ms-2"
   >
-    <h2>Skills funciona</h2>
+    <div class="row">
+      <h1>Experiencia laboral</h1>
+      <div class="col-lg-2">
+        <button
+          type="button"
+          class="btn btn-dark"
+          data-bs-toggle="modal"
+          data-bs-target="#newSkillModal"
+          ng-click=""
+          *ngIf="esta_logeado"
+        >
+          <i class="bi bi-pencil-fill"> Nueva skill</i>
+        </button>
+      </div>
+      <!-- Modal -->
+
+      <div
+        class="modal fade"
+        id="newSkillModal"
+        tabindex="-1"
+        aria-labelledby="newSkillModal"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-center" id="newSkillModal">
+                Agregar nueva habilidad
+              </h5>
+
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                (click)="onClose()"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <app-new-skill></app-new-skill>
+            </div>
+
+            <!-- <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button type="button" class="btn btn-primary">
+              Guardar cambios
+            </button>
+          </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col lg 1"></div>
+      <div class="col-lg-11">
+        <table class="table">
+          <tbody>
+            <tr *ngFor="let Skill of skill">
+              <td>
+                <h2>{{ Skill.nameHability }}</h2>
+              </td>
+
+              <td><img src="{{ Skill.percentageHability }}" /></td>
+              <td>Nivel: {{ Skill.percentageHability }}</td>
+
+              <td *ngIf="esta_logeado">
+                <button type="button" class="btn btn-light">
+                  <i class="bi bi-pencil-fill"></i>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  (click)="delete(Skill.id)"
+                >
+                  <i class="bi bi-trash3"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </section>
