@@ -1,6 +1,6 @@
-<section class="section" id="skillSection">
+<section class="section mt-10" id="skillSection">
   <div
-    class="image-fluid d-flex justify-content-center align-items-center mt-3 ms-2"
+    class="image-fluid d-flex justify-content-center align-items-center vh-100 mt-3 ms-2"
   >
     <div class="row">
       <h1 id="titleSkill" class="text-center">Habilidades y aptitudes</h1>
@@ -60,35 +60,18 @@
         </div>
       </div>
 
-      <div>
+      <div class="col lg 1"></div>
+      <div class="col-lg-11">
         <table class="table">
           <tbody>
             <tr *ngFor="let Skill of skill">
-              <td><img src="{{ Skill.iconHability }}" id="imgSkill" /></td>
               <td>
                 <h2>{{ Skill.nameHability }}</h2>
               </td>
 
-              <td>
-                <div *ngIf="Skill.percentageHability <= 35">
-                  <p>Nivel: Básico</p>
-                </div>
-                <div
-                  *ngIf="
-                    Skill.percentageHability > 35 &&
-                    Skill.percentageHability <= 70
-                  "
-                >
-                  <p>Nivel: Intermedio</p>
-                </div>
-                <div *ngIf="Skill.percentageHability > 70">
-                  <p>Nivel: Avanzado</p>
-                </div>
-              </td>
-              <!--Nivel:
-              {{
-                Skill.percentageHability
-              }}-->
+              <td><img src="{{ Skill.iconHability }}" /></td>
+              <td>Nivel: {{ Skill.percentageHability }}</td>
+
               <td *ngIf="esta_logeado">
                 <button type="button" class="btn btn-light">
                   <i class="bi bi-pencil-fill"></i>
@@ -101,6 +84,26 @@
                   <i class="bi bi-trash3"></i>
                 </button>
               </td>
+              <div class="card" style="width: 18rem">
+                <div class="card-header">
+                  <h1>{{ Skill.nameHability }}</h1>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <div *ngIf="Skill.percentageHability <= 35">Básico</div>
+                    <div
+                      *ngIf="
+                        Skill.percentageHability > 35 &&
+                        Skill.percentageHability <= 70
+                      "
+                    >
+                      Intermedio
+                    </div>
+                    <div *ngIf="Skill.percentageHability > 70">Avanzado</div>
+                  </li>
+                  <li class="list-group-item">A third item</li>
+                </ul>
+              </div>
             </tr>
           </tbody>
         </table>

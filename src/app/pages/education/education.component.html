@@ -1,90 +1,102 @@
 <section class="section" id="skillSection">
-  <div class="row">
-    <h1>Educacion</h1>
-    <div class="col-lg-2">
-      <button
-        type="button"
-        class="btn btn-dark"
-        data-bs-toggle="modal"
-        data-bs-target="#newEducacionModal"
-        ng-click=""
-        *ngIf="esta_logeado"
-      >
-        <i class="bi bi-pencil-fill"> Nueva Educacion</i>
-      </button>
-    </div>
-    <!-- Modal -->
+  <div
+    class="image-fluid d-flex justify-content-center align-items-center mt-3 ms-2"
+  >
+    <div class="justify-content-center">
+      <div class="row justify-content-center">
+        <h1 class="text-center" id="titleEducation">Educación</h1>
 
-    <div
-      class="modal fade"
-      id="newEducacionModal"
-      tabindex="-1"
-      aria-labelledby="newEducacionModal"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title text-center" id="newEducacionModal">
-              Agregar una nueva educacion
-            </h5>
+        <!-- Modal -->
 
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-              (click)="onClose()"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <app-new-educacion></app-new-educacion>
-          </div>
+        <div
+          class="modal fade"
+          id="newEducacionModal"
+          tabindex="-1"
+          aria-labelledby="newEducacionModal"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-center" id="newEducacionModal">
+                  Agregar una nueva educacion
+                </h5>
 
-          <!-- <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-danger"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
-            <button type="button" class="btn btn-primary">
-              Guardar cambios
-            </button>
-          </div> -->
-        </div>
-      </div>
-    </div>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                  (click)="onClose()"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <app-new-educacion></app-new-educacion>
+              </div>
 
-    <div class="col lg 1"></div>
-    <div class="col-lg-11">
-      <table class="table">
-        <tbody>
-          <tr *ngFor="let Educacion of educacion">
-            <td>
-              <h2>{{ Educacion.nameCertification }}</h2>
-            </td>
-
-            <td>Certificado expedido en: {{ Educacion.expeditionDate }}</td>
-            <td>En la institución: {{ Educacion.nameInstitution }}</td>
-            <td>Estado: {{ Educacion.enCurso }}</td>
-
-            <td *ngIf="esta_logeado">
-              <button type="button" class="btn btn-light">
-                <i class="bi bi-pencil-fill"></i>
-              </button>
+              <!-- <div class="modal-footer">
               <button
                 type="button"
                 class="btn btn-danger"
-                (click)="delete(Educacion.id)"
+                data-bs-dismiss="modal"
               >
-                <i class="bi bi-trash3"></i>
+                Cerrar
               </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+              <button type="button" class="btn btn-primary">
+                Guardar cambios
+              </button>
+            </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center">
+          <tbody>
+            <button
+              type="button"
+              class="btn btn-dark"
+              data-bs-toggle="modal"
+              data-bs-target="#newEducacionModal"
+              ng-click=""
+              *ngIf="esta_logeado"
+            >
+              <i class="bi bi-pencil-fill"> Nueva Educacion</i>
+            </button>
+            <div class="row" *ngFor="let Educacion of educacion">
+              <div class="col">
+                <h2>{{ Educacion.nameCertification }}</h2>
+              </div>
+
+              <div class="col">
+                <p>Certificado expedido en: {{ Educacion.expeditionDate }}</p>
+                <p>En la institución: {{ Educacion.nameInstitution }}</p>
+                <p
+                  *ngIf="
+                    Educacion.enCurso === true;
+                    then terminado;
+                    else enCurso
+                  "
+                ></p>
+                <ng-template #terminado> <p>Estado: Terminado</p></ng-template>
+                <ng-template #enCurso> <p>Estado: En Curso</p></ng-template>
+
+                <div *ngIf="esta_logeado">
+                  <button type="button" class="btn btn-light">
+                    <i class="bi bi-pencil-fill"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    (click)="delete(Educacion.id)"
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </tbody>
+        </div>
+      </div>
     </div>
   </div>
 </section>

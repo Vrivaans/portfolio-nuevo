@@ -1,90 +1,99 @@
 <section class="section" id="experienceSection">
-  <div class="row">
-    <h1>Experiencia laboral</h1>
-    <div class="col-lg-2">
-      <button
-        type="button"
-        class="btn btn-dark"
-        data-bs-toggle="modal"
-        data-bs-target="#newExperienceModal"
-        ng-click=""
-        *ngIf="esta_logeado"
-      >
-        <i class="bi bi-pencil-fill"> Nueva experiencia</i>
-      </button>
-    </div>
-    <!-- Modal -->
-
-    <div
-      class="modal fade"
-      id="newExperienceModal"
-      tabindex="-1"
-      aria-labelledby="newExperienceModal"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title text-center" id="newExperienceModal">
-              Agregar nueva Experiencia
-            </h5>
-
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-              (click)="onClose()"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <app-new-experience></app-new-experience>
-          </div>
-
-          <!-- <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-danger"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
-            <button type="button" class="btn btn-primary">
-              Guardar cambios
-            </button>
-          </div> -->
-        </div>
+  <div
+    class="image-fluid d-flex justify-content-center align-items-center mt-3 ms-2"
+  >
+    <div class="row">
+      <h1 class="text-center" id="titleExperience">Experiencia laboral</h1>
+      <div class="col-lg-2">
+        <button
+          type="button"
+          class="btn btn-dark"
+          data-bs-toggle="modal"
+          data-bs-target="#newExperienceModal"
+          ng-click=""
+          *ngIf="esta_logeado"
+        >
+          <i class="bi bi-pencil-fill"> Nueva experiencia</i>
+        </button>
       </div>
-    </div>
+      <!-- Modal -->
 
-    <div class="col lg 1"></div>
-    <div class="col-lg-11">
-      <table class="table">
-        <tbody>
-          <tr *ngFor="let Experiencie of experience">
-            <td>
-              <h2>{{ Experiencie.position }}</h2>
-            </td>
+      <div
+        class="modal fade"
+        id="newExperienceModal"
+        tabindex="-1"
+        aria-labelledby="newExperienceModal"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-center" id="newExperienceModal">
+                Agregar nueva Experiencia
+              </h5>
 
-            <td>Desde: {{ Experiencie.startDate }}</td>
-            <td>Hasta: {{ Experiencie.endDate }}</td>
-            <td>{{ Experiencie.photoUrl }}</td>
-
-            <td *ngIf="esta_logeado">
-              <button type="button" class="btn btn-light">
-                <i class="bi bi-pencil-fill"></i>
-              </button>
               <button
                 type="button"
-                class="btn btn-danger"
-                (click)="delete(Experiencie.id)"
-              >
-                <i class="bi bi-trash3"></i>
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                (click)="onClose()"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <app-new-experience></app-new-experience>
+            </div>
+
+            <!-- <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-danger"
+            data-bs-dismiss="modal"
+          >
+            Cerrar
+          </button>
+          <button type="button" class="btn btn-primary">
+            Guardar cambios
+          </button>
+        </div> -->
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <table class="table">
+          <tbody>
+            <tr *ngFor="let Experiencie of experience">
+              <td>
+                <h2>{{ Experiencie.position }}</h2>
+              </td>
+
+              <td>
+                <p>Desde: {{ Experiencie.startDate }}</p>
+              </td>
+              <td>
+                <p>Hasta: {{ Experiencie.endDate }}</p>
+              </td>
+              <td>
+                <p>{{ Experiencie.photoUrl }}</p>
+              </td>
+
+              <td *ngIf="esta_logeado">
+                <button type="button" class="btn btn-light">
+                  <i class="bi bi-pencil-fill"></i>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  (click)="delete(Experiencie.id)"
+                >
+                  <i class="bi bi-trash3"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>

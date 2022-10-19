@@ -9,13 +9,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./new-skill.component.scss']
 })
 export class NewSkillComponent implements OnInit {
-  nameHability = ""
-  iconHability = ""
-  percentageHability = 0
+  nameHability:string
+  iconHability:string
+  percentageHability:number
 
-  constructor(private skillService: SkillService, private router: Router) { }
+  constructor(private skillService: SkillService, private router: Router) {
+
+  }
 
   ngOnInit(): void {
+
   }
 
   onCreate(): void {
@@ -23,7 +26,7 @@ export class NewSkillComponent implements OnInit {
     const skill = new Skill (this.nameHability, this.iconHability, this.percentageHability)
     this.skillService.save(skill).subscribe(data => {
       alert("Habilidad guardada correctamente")
-      this.router.navigate([''])
+      window.location.reload()
     }, err => {
       alert("Hubo un error y no se pudo guardar la habilidad")
       this.router.navigate([''])
