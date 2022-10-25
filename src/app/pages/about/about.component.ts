@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Descripcion } from 'src/app/Models/descripcion';
+import { DescripcionService } from 'src/app/Services/descripcion.service';
 import { TokenService } from 'src/app/Services/token.service';
 
 
@@ -10,26 +12,35 @@ import { TokenService } from 'src/app/Services/token.service';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
+  esta_logeado = false;
+  descripcion: Descripcion;
 
-
-  constructor(private router: Router, private tokenService: TokenService){}
+  constructor(private router: Router, private tokenService: TokenService, private descripcionService: DescripcionService){}
 
   ngOnInit(): void {
+    this.loadDescripcion()
     if(this.tokenService.getToken()){
       this.esta_logeado = true;
     }else{
       this.esta_logeado = false;
     }
+
   }
 
   onLogOut(): void {
       this.tokenService.logOut();
       window.location.reload();
   }
+  loadDescripcion(): void{
+    this.descripcionService.getDescripcion().subscribe(data => {
+      this.descripcion = data
+    })
+  }
 
 
 
-  esta_logeado = false;
+
+
   borrarFotoPerfil(){
     console.log("estoy borrando :v")
   }
