@@ -9,7 +9,7 @@ import { Skill } from '../Models/skill';
   providedIn: 'root'
 })
 export class SkillService {
-  URL = environment.URL
+  URL = 'https://portfoliobackvrivaans.herokuapp.com/'
 
   constructor(private httpClient: HttpClient, private router: Router) { }
 

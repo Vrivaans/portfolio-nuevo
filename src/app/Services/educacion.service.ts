@@ -10,7 +10,7 @@ import { Educacion } from '../Models/educacion';
 })
 export class EducacionService {
 
-  URL = environment.URL;
+  URL = 'https://portfoliobackvrivaans.herokuapp.com/'
   constructor(private httpClient: HttpClient) { }
 
   public list(): Observable<Educacion[]> {

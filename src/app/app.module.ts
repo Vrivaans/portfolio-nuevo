@@ -24,6 +24,7 @@ import { NewEducacionComponent } from './pages/education/new-educacion/new-educa
 import { EditEducacionComponent } from './pages/education/edit-educacion/edit-educacion.component';
 import { NewSkillComponent } from './pages/skill-component/new-skill/new-skill.component';
 import { EditSkillComponent } from './pages/skill-component/edit-skill/edit-skill.component';
+import { EditDescripcionComponent } from './pages/about/edit-descripcion/edit-descripcion.component';
 
 
 
@@ -49,6 +50,7 @@ import { EditSkillComponent } from './pages/skill-component/edit-skill/edit-skil
     EditEducacionComponent,
     NewSkillComponent,
     EditSkillComponent,
+    EditDescripcionComponent,
 
 
 

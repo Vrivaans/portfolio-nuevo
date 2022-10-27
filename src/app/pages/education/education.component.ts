@@ -13,7 +13,7 @@ export class EducationComponent implements OnInit {
   constructor(private educacionService: EducacionService, private tokenService: TokenService) { }
 
   esta_logeado = false;
-  stateCourses:String = "";
+
 
 
 

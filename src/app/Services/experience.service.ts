@@ -8,7 +8,7 @@ import { Experience } from '../Models/experience';
   providedIn: 'root'
 })
 export class ExperienceService {
-  URL = environment.URL;
+  URL = 'https://portfoliobackvrivaans.herokuapp.com/'
 
   constructor(private httpClient: HttpClient) { }
 

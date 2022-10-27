@@ -9,13 +9,13 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class userService {
-  URL:string = environment.URL + 'traer/';
+  URL = 'https://portfoliobackvrivaans.herokuapp.com/'
 
   constructor(private http: HttpClient) {
 
   }
   public getUser(): Observable<user> {
-      return this.http.get<user>(this.URL+"usuario")
+      return this.http.get<user>(this.URL+"traer/usuario")
       console.log("hola desde getUser");
   }
 
