@@ -8,7 +8,7 @@ import { LoginUsuario } from 'src/app/Models/login-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authUrl = 'http://localhost:8080/auth/';
+  authUrl = 'https://portfoliobackvrivaans.herokuapp.com/auth/';
   constructor(private httpClient: HttpClient) {
 
    }
