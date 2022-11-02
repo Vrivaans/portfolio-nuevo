@@ -1,11 +1,24 @@
 <section class="section">
   <div class="container" id="divAbout">
-    <div class="row justify-content-center align-items-center vh-100 mt-3 ms-2">
+    <div
+      class="row justify-content-center align-items-center vh-100 mt-3 ms-2 mb-3"
+    >
       <div class="section" id="about">
         <div class="row">
-          <div class="col-sm-6">
-            <div id="fotoPerfil" class="">
-              <img src="../../../assets/foto-perfil-png1.png" alt="" />
+          <div
+            class="col-sm-6 d-flex justify-content-center align-items-center"
+          >
+            <div
+              id="fotoPerfil"
+              class="d-flex justify-content-center align-items-center"
+            >
+              <div class="d-flex justify-content-center align-items-center">
+                <img
+                  src="../../../assets/foto-perfil-png1.png"
+                  class="responsive"
+                  alt=""
+                />
+              </div>
               <div class="modificar-foto d-flex justify-content-center">
                 <div
                   *ngIf="
@@ -91,9 +104,11 @@
           <div class="col-sm-6">
             <div id="divTexto">
               <h2>Acerca de mí</h2>
-              <p>
-                {{ descripcion.descripcion }}
-              </p>
+              <div>
+                <p>
+                  {{ descripcion.descripcion }}
+                </p>
+              </div>
               <div class="modificar-aboutMe d-flex justify-content-center">
                 <div
                   *ngIf="

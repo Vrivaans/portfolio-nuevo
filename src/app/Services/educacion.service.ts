@@ -11,6 +11,7 @@ import { Educacion } from '../Models/educacion';
 export class EducacionService {
 
   URL = 'https://portfoliobackvrivaans.herokuapp.com/'
+  //URL = 'http://localhost:8080/'
   constructor(private httpClient: HttpClient) { }
 
   public list(): Observable<Educacion[]> {
