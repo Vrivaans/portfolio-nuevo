@@ -1,7 +1,7 @@
 # Portfolio
 
 ## Uso
-Este proyecto fué creado con el propósito de poder crear un portfolio para usuario únicamente.
+Este proyecto fué creado con el propósito de poder crear un portfolio para un usuario únicamente.
 Hasta el momento no andan las funciones de updates para editar la descripción y los campos de habilidades, experiencia y educación (esto está hecho por un novato), tengo algunos errores en el backend y estoy trabajando en su solución. 
 
 En caso de querer utilizarlo, debés hacer un <npm install> en la parte de angular. El back (Java - Spring Boot - Maven): https://github.com/Vrivaans/backend-portfolio/tree/master
