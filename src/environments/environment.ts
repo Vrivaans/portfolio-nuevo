@@ -3,11 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: true,
+  production: false,
   //URL: 'http://localhost:8080/'
 
   //Para cuando haga la de produccion
-  URL: 'https://portfoliobackvrivaans.herokuapp.com/'
+  //URL: 'https://portfoliobackvrivaans.herokuapp.com/'
 
 };
 

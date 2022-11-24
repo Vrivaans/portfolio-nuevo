@@ -26,7 +26,7 @@ export class NewSkillComponent implements OnInit {
     const skill = new Skill (this.nameHability, this.iconHability, this.percentageHability)
     this.skillService.save(skill).subscribe(data => {
       alert("Habilidad guardada correctamente")
-      window.location.reload()
+      window.location.reload()  
     }, err => {
       alert("Hubo un error y no se pudo guardar la habilidad")
       this.router.navigate([''])
