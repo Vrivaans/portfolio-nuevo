@@ -1,27 +1,29 @@
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
+## Uso
+Este proyecto fué creado con el propósito de poder crear un portfolio para un usuario únicamente.
+Hasta el momento no andan las funciones de updates para editar la descripción y los campos de habilidades, experiencia y educación (esto está hecho por un novato), tengo algunos errores en el backend y estoy trabajando en su solución. 
 
-## Development server
+En caso de querer utilizarlo, debés hacer un <npm install> en la parte de angular. El back (Java - Spring Boot - Maven): https://github.com/Vrivaans/backend-portfolio/tree/master
+Instalar lo que Maven necesite (si hace falta :v) 
+No olviden cambiar las URL en el front y back para ejecutar en local.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Una vez que se ejecute el back y se cree la base de datos (el nombre configurado es "portfolio_argprog", en caso de que no sepan donde encontrarlo para cambiarlo es en el archivo application.properties) tienen que:
+-Ir a la base de datos y crear un rol en la tabla de rol. El comando es: <INSERT INTO `rol` (`id`, `rol_nombre`) VALUES (null,'ROLE_USER').
+Una vez creado el rol, crean el usuario en Postman: 
+    "nombre": "tuNombre",
+    "nombreUsuario":"tuNombreDeUsuario",
+    "email":"tu@email.com",
+    "password":"tuContraseña”
+  El rol no hace falta colocarlo porque por defecto lo crea como usuario.
+  Recuerden que no se puede agregar más de un usuario y esto es solo para la parte del login.
+  
+  Esto es para crear el usuario que puede leer el front para mostrar su información.
+  insert into usuario_model (id,date_of_birth,last_name,name, photo_url)
+  values (1,'1/1/1','Tu apellido','Tu nombre', 'photoUrl no hace falta, debería sacarlo xD' )
+Solo reemplacen con sus datos, y en caso de equivocarse no creen otro usuario, dado que solo lee el usuario con id=1.
 
-## Code scaffolding
+Hecho esto, ya se puede hacer el login y desde el front ya se pueden mostrar datos. Ya queda en ustedes agregar experiencias, habilidades y educación, solo fíjense de como van los datos en el backend para que no tengan problemas a la hora de ejecutar.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Agradecimientos
+Gracias a aquellos que me ayudaron a llegar hasta este punto, ahora solo queda mejorar los errores. Y gracias por ver esto :v.
