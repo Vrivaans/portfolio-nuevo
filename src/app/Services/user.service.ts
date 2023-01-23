@@ -9,14 +9,14 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class userService {
-  URL = 'https://portfoliobackvrivaans.herokuapp.com/'
+  URL = 'https://green-pine-9470.fly.dev/'
 
   constructor(private http: HttpClient) {
 
   }
   public getUser(): Observable<user> {
       return this.http.get<user>(this.URL+"traer/usuario")
-      console.log("hola desde getUser");
+      //console.log("hola desde getUser");
   }
 
 }

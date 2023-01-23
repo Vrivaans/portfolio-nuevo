@@ -8,7 +8,7 @@ import { Descripcion } from '../Models/descripcion';
   providedIn: 'root'
 })
 export class DescripcionService {
-  URL = 'https://portfoliobackvrivaans.herokuapp.com/'
+  URL = 'https://green-pine-9470.fly.dev/'
   constructor(private httpClient: HttpClient) { }
   public getDescripcion(): Observable<Descripcion> {
     return this.httpClient.get<Descripcion>(this.URL+'traer/descripcion/')

@@ -12,8 +12,18 @@ export class HomeComponent implements OnInit {
 
   constructor(public userService: userService){}
 
+  prueba: string = "Ariel";
+
   ngOnInit(): void {
     this.userService.getUser().subscribe(data => {this.user = data})
+  }
+
+  cambiar(){
+    if(this.prueba==="Ariel"){
+      this.prueba="Elias"
+    }else{
+      this.prueba="Ariel"
+    }
   }
 
 }

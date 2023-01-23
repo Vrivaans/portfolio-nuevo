@@ -10,7 +10,7 @@ import { Educacion } from '../Models/educacion';
 })
 export class EducacionService {
 
-  URL = 'https://portfoliobackvrivaans.herokuapp.com/'
+  URL = 'https://green-pine-9470.fly.dev/'
   //URL = 'http://localhost:8080/'
   constructor(private httpClient: HttpClient) { }
 

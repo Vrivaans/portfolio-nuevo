@@ -8,7 +8,7 @@ import { LoginUsuario } from 'src/app/Models/login-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authUrl = 'https://portfoliobackvrivaans.herokuapp.com/auth/';
+  authUrl = 'https://green-pine-9470.fly.dev/';
   constructor(private httpClient: HttpClient) {
 
    }
