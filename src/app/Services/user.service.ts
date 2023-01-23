@@ -16,7 +16,7 @@ export class userService {
   }
   public getUser(): Observable<user> {
       return this.http.get<user>(this.URL+"traer/usuario")
-      //console.log("hola desde getUser");
+      //console.log("hola desde getUser");  
   }
 
 }

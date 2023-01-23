@@ -8,7 +8,7 @@ import { LoginUsuario } from 'src/app/Models/login-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authUrl = 'https://green-pine-9470.fly.dev/';
+  authUrl = 'https://green-pine-9470.fly.dev/auth/';
   constructor(private httpClient: HttpClient) {
 
    }
